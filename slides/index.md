@@ -1,10 +1,11 @@
 
-# Maps!
+# Boulder/Denver D3 And Data Vis
 
-From the terminal, pop in:
+***
 
-  ```yo reveal:slide "Slide Title"```
+### January 30th, 2014
 
-Available options:
+***
 
- ```--markdown --attributes --notes```
+## TODO: link slides here
+

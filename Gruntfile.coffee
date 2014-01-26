@@ -10,6 +10,7 @@ module.exports = (grunt) ->
                     livereload: true
                 files: [
                     'index.html'
+                    'step*.html'
                     'slides/*.md'
                     'slides/*.html'
                     'js/*.js'
@@ -67,11 +68,12 @@ module.exports = (grunt) ->
                         'slides/**'
                         'bower_components/**'
                         'js/**'
+                        'step*.html'
                     ]
                     dest: 'dist/'
                 },{
                     expand: true
-                    src: ['index.html']
+                    src: ['index.html', 'step*.html']
                     dest: 'dist/'
                     filter: 'isFile'
                 }]
