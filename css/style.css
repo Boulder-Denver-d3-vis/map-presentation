@@ -1,3 +1,15 @@
 text {
   fill: #222; stroke: none;
 }
+
+.land {
+  fill: none;
+  stroke: #999;
+  stroke-width: 1px;
+}
+
+.states {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}

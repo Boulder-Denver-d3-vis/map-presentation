@@ -11,25 +11,37 @@
 
     <script>
     var width = 960, height = 500;
-    var projection = d3.geo.albersUsa() .scale(1000) .translate([width / 2, height / 2]);
-    var path = d3.geo.path() .projection(projection), svg;
+    var projection = d3.geo.albersUsa().scale(1000).translate([width / 2, height / 2]);
+    var path = d3.geo.path().projection(projection), svg;
 
     svg = d3.select("#container").append("svg");
     svg.attr("width", width) .attr("height", height);
-    fields = [ "1990-advanced", "1990-bachelors", "1990-hs", "1990-not-hs", "2000-advanced",
+    fields = [ "Code", "1990-advanced", "1990-bachelors", "1990-hs", "1990-not-hs", "2000-advanced",
     "2000-bachelors", "2000-hs", "2006-advanced", "2006-bachelors", "2006-hs", "2007-advanced",
     "2007-bachelors", "2007-hs", "2008-advanced", "2008-bachelors", "2008-hs", "2009-advanced",
     "2009-bachelors", "2009-hs"];
 
     d3.json("data/us.json", function(us) {
       d3.csv("data/education.csv", function(edu) {
+        var dataById = {}
         edu.forEach(function(d) { 
           fields.forEach(function(field) {
-            d[field] = parseFloat(d[field]);
+            d[field] = +d[field];
           });
         })
-        svg.append("text").attr("transform", "translate(0,20)").text("We have " + edu.length + " edu entries.");
-        console.log(edu[50]);
+        svg.append("g")
+          .classed("states", true)
+          .selectAll("path")
+          .data(topojson.feature(us, us.objects.states).features)
+          .enter()
+          .append("path")
+          .attr("class", function(d,i) {console.log(d, this); return d.id;})
+          .attr("d", path)
+
+        svg.insert("path")
+          .datum(topojson.feature(us, us.objects.land))
+          .attr("class", "land")
+          .attr("d", path);
       });
     });
   </script>
