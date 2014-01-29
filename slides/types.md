@@ -2,7 +2,7 @@
 
 ***
 
-* Most maps are intended to show geography, but *thematic maps* attach extra information to the geography.
+* Most maps are intended to show geography, but *thematic maps* attach extra information to the display.
 
 * The first thematic map was created by Jocodus Hondius in 1607.
 

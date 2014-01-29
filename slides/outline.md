@@ -1,8 +1,8 @@
-## Draw USA and States:
+## Draw the States:
 
 ***
 
-Set a projection, and set it up.
+Set a projection, and configure it.
 
 ```javascript
 var width = 960, height = 500;
@@ -25,3 +25,4 @@ svg.append("g")
   .append("path")
   .attr("d", path)
 ```
+[Result](step2.html)
