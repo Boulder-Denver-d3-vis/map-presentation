@@ -2,7 +2,7 @@
 
 ***
 
-Set a projection, and configure it.
+Set a projection, and configure it. (AlbersUsa info [here](https://github.com/mbostock/d3/wiki/Geo-Projections#wiki-standard-projections)
 
 ```javascript
 var width = 960, height = 500;

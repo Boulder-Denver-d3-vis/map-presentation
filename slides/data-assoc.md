@@ -2,7 +2,9 @@
 
 ***
 
-We need to collate and associate our data with each state. Fortunately we have an ID field that is shared between the two.
+  We need to associate our education data with each state. 
+
+  Fortunately we have an ID field that is shared between the two.
 
 ***
 

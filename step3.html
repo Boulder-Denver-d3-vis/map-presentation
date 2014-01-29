@@ -21,30 +21,34 @@
     "2007-bachelors", "2007-hs", "2008-advanced", "2008-bachelors", "2008-hs", "2009-advanced",
     "2009-bachelors", "2009-hs"];
 
-    function colorStates(field) {
-      var colorScale = d3.scale.linear()
-        .domain([0,100])
-        .range(["#f00", "#00f"])
-        .interpolate(d3.interpolateHcl);
+    function colorStates(field, scale) {
+      console.log(scale.domain(), field);
       d3.selectAll(".states path")
-        .attr("fill", function(d) { return d.data ? colorScale(d.data[field]) : "#333"; })
+        .attr("fill", function(d) { if(d.data) { console.log(field, d.data[field]);} return d.data ? scale(d.data[field]) : "#333"; })
     }
 
     d3.json("data/us.json", function(us) {
       d3.csv("data/education.csv", function(edu) {
-        var dataById = {},  features;
+        var dataById = {}, features, field, scale;
+
+        field = "2007-hs";
 
         edu.forEach(function(d) { 
           fields.forEach(function(field) {
             d[field] = parseFloat(d[field]);
           });
           dataById[d.Code] = d;
-        })
+        });
 
         features = topojson.feature(us, us.objects.states).features;
         features.forEach(function(d) {
           d.data = dataById[d.id];
         });
+
+        scale = d3.scale.linear()
+                .domain(d3.extent(edu, function(d,i) { return d[field];}))
+                .range(["#ffeda0", "#f03b20"])
+                .interpolate(d3.interpolateHcl);
 
         svg.append("g")
           .classed("states", true)
@@ -59,7 +63,8 @@
           .datum(topojson.feature(us, us.objects.land))
           .attr("class", "land")
           .attr("d", path);
-        colorStates("2009-hs");
+
+        colorStates(field, scale);
       });
     });
   </script>

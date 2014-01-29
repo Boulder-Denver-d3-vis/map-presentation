@@ -19,7 +19,7 @@ Loop over the data and turn strings into numbers:
           fields.forEach(function(field) {
             d[field] = parseFloat(d[field]);
           });
-        })
+        }) // Append some text to prove we got what we want.
         svg.append("text").attr("transform", "translate(0,20)")
           .text("We have " + edu.length + " edu entries.");
       });
