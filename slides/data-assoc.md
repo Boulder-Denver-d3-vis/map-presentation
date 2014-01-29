@@ -1,5 +1,7 @@
 ## Associate our data
 
+***
+
 We need to collate and associate our data with each state. Fortunately we have an ID field that is shared between the two.
 
 ***
@@ -18,9 +20,9 @@ edu.forEach(function(d) {
 Add each state's data to the feature it's associated with:
 
 ```javascript
-features = topojson.feature(us, us.objects.states).features;
-features.forEach(function(d) {
-  d.data = dataById[d.id];
+states = topojson.feature(us, us.objects.states).features;
+states.forEach(function(d) {
+  d.data = dataById[d.id]; // Get the data for each state and store it on the feature object
 });
 ```
 

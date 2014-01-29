@@ -35,13 +35,7 @@
           .data(topojson.feature(us, us.objects.states).features)
           .enter()
           .append("path")
-          .attr("class", function(d,i) {console.log(d, this); return d.id;})
           .attr("d", path)
-
-        svg.insert("path")
-          .datum(topojson.feature(us, us.objects.land))
-          .attr("class", "land")
-          .attr("d", path);
       });
     });
   </script>
