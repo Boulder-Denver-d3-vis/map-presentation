@@ -2,7 +2,7 @@
 
 ***
 
-We create a linear scale between two shades.
+Create a linear scale between two shades.
 
 ```javascript
 scale = d3.scale.linear()
@@ -11,9 +11,11 @@ scale = d3.scale.linear()
         .interpolate(d3.interpolateHcl);
 ```
 
-We're just going from Reddish (low) to Yellowish (high) as percentages go from min to max in the given set.
+* We're going from Reddish to Yellowish as percentages go from low to high.
 
-We wrap the color step in a function that takes a field and an associated scale. This lets us do things like add a dropdown to pick which piece of data we want to display.
+* We wrap the color step in a function that takes a field and an associated scale. 
+
+* This lets us do things like add a dropdown to pick which piece of data we want to display.
 
 ```javascript
 function colorStates(field, scale) {

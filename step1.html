@@ -24,7 +24,9 @@
             d[field] = parseFloat(d[field]);
           });
         })
-        svg.append("text").attr("transform", "translate(0,20)").text("We have " + edu.length + " edu entries.");
+        svg.append("text")
+          .attr("transform", "translate(0,20)")
+          .text("We have " + edu.length + " edu entries.");
         console.log(edu[50]);
       });
     });
