@@ -7,5 +7,7 @@
 
 ***
 
-## TODO: link slides here
+## Get the Slides Here:
+
+[http://bit.ly/1nrw23J](http://bit.ly/1nrw23J)
 
