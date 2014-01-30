@@ -3,6 +3,10 @@
 ***
 
 * D3 deals best with two formats: GeoJson [(link)](http://geojson.org/) and TopoJson [(link)](https://github.com/mbostock/topojson/wik://github.com/mbostock/topojson/wiki)
+  * Both formats are open standards, TopoJson eliminates duplicated segments and uses a fixed-precision number format for much-reduced size.
+
+***
+
 
 * We'll get an example from Mike: [http://bl.ocks.org/mbostock/4090848](http://bl.ocks.org/mbostock/4090848)
 
