@@ -12,4 +12,4 @@
 
 ***
 
-We're going to use Albers USA, an equal-area conic projection centered over the USA. [(More info here)](http://en.wikipedia.org/wiki/Albers_projection) We have a little shape distortion, but minimal area distortion. The USGS and Census Bureau use Albers.
+We're going to use Albers USA, an equal-area conic projection centered over the USA. [(Wikipedia)](http://en.wikipedia.org/wiki/Albers_projection) We have a little shape distortion, but minimal area distortion.
