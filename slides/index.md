@@ -7,7 +7,9 @@
 
 ***
 
-## Get the Slides Here:
+#### Get the Slides Here:
 
-[http://bit.ly/1nrw23J](http://bit.ly/1nrw23J)
+## [http://bit.ly/1nrw23J](http://bit.ly/1nrw23J)
+
+[Github Project](https://github.com/Boulder-Denver-d3-vis/map-presentation)
 
